@@ -5,9 +5,12 @@ import com.example.demo.Dtos.RegisterRequest;
 import com.example.demo.Entities.User;
 import com.example.demo.Repositories.userRepository;
 import lombok.Data;
+import org.hibernate.annotations.SecondaryRow;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 @Data
+@Service
 public class AuthService {
     private final userRepository userRepository;
     private final PasswordEncoder passwordEncoder;
